@@ -1,0 +1,63 @@
+area,location,bedrooms,bathrooms,year_built,parking,garden,pool,property_type,furnishing_status,price
+2000,Ahmedabad,4,3,2021,1,1,0,Row House,Semi-Furnished,10500000
+1350,Surat,2,2,2016,1,0,0,Apartment,Furnished,7600000
+1850,Vadodara,3,3,2013,1,1,1,Bungalow,Furnished,9700000
+2200,Rajkot,4,3,2011,1,1,1,Row House,Semi-Furnished,9900000
+1600,Gandhinagar,3,2,2017,1,1,0,Villa,Furnished,9200000
+1000,Bhavnagar,2,1,2020,0,0,0,Apartment,Unfurnished,6200000
+1450,Junagadh,3,2,2014,1,0,0,Apartment,Semi-Furnished,7800000
+2400,Jamnagar,4,3,2010,1,1,1,Penthouse,Furnished,10200000
+1750,Anand,3,2,2015,1,1,0,Row House,Semi-Furnished,8800000
+1300,Navsari,2,2,2018,1,0,0,Apartment,Semi-Furnished,7100000
+1650,Mehsana,3,2,2016,1,1,0,Bungalow,Furnished,8900000
+1500,Ahmedabad,3,2,2019,1,0,0,Apartment,Furnished,8400000
+2000,Surat,4,3,2012,1,1,1,Bungalow,Furnished,9600000
+2250,Vadodara,4,3,2013,1,1,1,Penthouse,Furnished,10800000
+1400,Rajkot,2,2,2020,1,0,0,Row House,Unfurnished,7800000
+1800,Ahmedabad,3,2,2018,1,1,0,Apartment,Semi-Furnished,8700000
+2100,Surat,4,3,2015,1,1,1,Row House,Furnished,10200000
+1550,Vadodara,3,2,2017,1,1,0,Apartment,Unfurnished,7900000
+1900,Rajkot,3,3,2014,1,1,1,Villa,Furnished,9500000
+1700,Gandhinagar,3,2,2019,1,1,0,Bungalow,Semi-Furnished,8800000
+1200,Bhavnagar,2,1,2021,0,0,0,Apartment,Furnished,6400000
+1600,Junagadh,3,2,2016,1,0,0,Apartment,Unfurnished,7200000
+2500,Jamnagar,5,4,2010,1,1,1,Penthouse,Furnished,11500000
+1800,Anand,3,2,2018,1,0,0,Row House,Unfurnished,8200000
+1350,Navsari,2,2,2020,1,0,0,Apartment,Semi-Furnished,7500000
+1900,Ahmedabad,3,2,2020,1,1,0,Bungalow,Semi-Furnished,9100000
+1600,Surat,3,2,2018,1,1,0,Apartment,Unfurnished,7600000
+2200,Vadodara,4,3,2019,1,1,1,Villa,Furnished,10600000
+1500,Rajkot,3,2,2017,1,0,0,Apartment,Furnished,8000000
+1800,Gandhinagar,3,2,2020,1,1,0,Row House,Furnished,8900000
+1100,Bhavnagar,2,1,2022,0,0,0,Apartment,Semi-Furnished,6300000
+1550,Junagadh,3,2,2019,1,0,0,Apartment,Furnished,7700000
+2450,Jamnagar,4,3,2016,1,1,1,Penthouse,Unfurnished,11200000
+1700,Anand,3,2,2021,1,1,0,Villa,Semi-Furnished,9100000
+1450,Navsari,2,2,2021,1,0,0,Apartment,Furnished,7400000
+1750,Mehsana,3,2,2018,1,1,0,Bungalow,Unfurnished,8500000
+
+1450,Surat,2,2,2016,1,0,1,Apartment,Furnished,7690000
+2500,Ahmedabad,5,4,2015,1,1,1,Villa,Semi-Furnished,11675000
+1600,Navsari,3,2,2017,1,1,0,Bungalow,Unfurnished,8440000
+1750,Rajkot,3,3,2013,1,1,1,Row House,Semi-Furnished,9635000
+1300,Bhavnagar,2,2,2019,1,0,0,Apartment,Furnished,7370000
+1550,Jamnagar,3,2,2014,1,1,0,Row House,Furnished,8700000
+1650,Junagadh,3,2,2020,1,0,0,Apartment,Unfurnished,8270000
+1900,Mehsana,3,2,2018,1,1,0,Bungalow,Furnished,9530000
+1500,Anand,3,2,2019,1,0,0,Apartment,Furnished,8330000
+1350,Gandhinagar,2,1,2021,1,1,0,Apartment,Semi-Furnished,7400000
+1400,Ahmedabad,2,2,2020,1,1,0,Apartment,Unfurnished,7580000
+2100,Vadodara,4,3,2016,1,1,1,Villa,Semi-Furnished,10310000
+1200,Surat,2,1,2021,1,0,0,Apartment,Furnished,6720000
+1850,Rajkot,3,3,2012,1,1,1,Row House,Unfurnished,9430000
+1750,Jamnagar,3,2,2013,1,1,0,Bungalow,Furnished,9350000
+1600,Anand,3,2,2016,1,0,0,Apartment,Furnished,8200000
+1500,Navsari,3,2,2018,1,0,0,Apartment,Semi-Furnished,7860000
+1800,Bhavnagar,3,3,2017,1,1,1,Row House,Unfurnished,9400000
+1950,Vadodara,4,3,2015,1,1,1,Penthouse,Furnished,10200000
+1700,Gandhinagar,3,2,2021,1,1,0,Bungalow,Semi-Furnished,8980000
+1650,Ahmedabad,3,2,2020,1,0,0,Apartment,Furnished,8610000
+1400,Surat,2,2,2019,1,0,0,Apartment,Furnished,7540000
+1250,Junagadh,2,1,2022,1,0,0,Apartment,Unfurnished,6800000
+2200,Rajkot,4,3,2013,1,1,1,Villa,Semi-Furnished,10520000
+2000,Jamnagar,4,3,2011,1,1,1,Penthouse,Furnished,10180000

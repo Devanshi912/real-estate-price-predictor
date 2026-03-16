@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+  .property-detail {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    background-color: #fff;
+  }
+
+  .property-image {
+  height: 200px;        
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+  .detail-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #2c3e50;
+  }
+
+  .detail-price {
+    font-size: 1.5rem;
+    color: #2c7be5;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  .detail-info p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #555;
+  }
+
+  .description {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: none;
+    color: #2c7be5;
+    font-weight: 500;
+  }
+
+  .back-link:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<div class="property-detail">
+  <img src="{{ property.image.url }}" alt="Property Image" class="property-image">
+  
+  <h1 class="detail-heading">{{ property.property_type }} in {{ property.location }}</h1>
+  <div class="detail-price">₹ {{ property.price|floatformat:0 }}</div>
+
+  <div class="detail-info">
+    <p><strong>Area:</strong> {{ property.area }} sq ft</p>
+    <p><strong>Bedrooms:</strong> {{ property.bedrooms }}</p>
+    <p><strong>Bathrooms:</strong> {{ property.bathrooms }}</p>
+    <p><strong>Year Built:</strong> {{ property.year_built }}</p>
+    <p><strong>Parking:</strong> {{ property.parking|yesno:"Yes,No" }}</p>
+    <p><strong>Garden:</strong> {{ property.garden|yesno:"Yes,No" }}</p>
+    <p><strong>Pool:</strong> {{ property.pool|yesno:"Yes,No" }}</p>
+    <p><strong>Type:</strong> {{ property.property_type }}</p>
+  </div>
+
+  <div class="description">
+    <h3>Description:</h3>
+    <p>{{ property.description }}</p>
+  </div>
+
+  <a href="{% url 'property_listings' %}" class="back-link">← Back to Listings</a>
+
+</div>
+{% endblock %}

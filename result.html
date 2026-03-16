@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Prediction Result</h2>
+    <div class="alert alert-success">
+        <strong>Predicted Price:</strong> ₹{{ data.predicted_price|floatformat:0 }}
+    </div>
+
+    <h5>Your Input Details:</h5>
+    <ul class="list-group">
+        <li class="list-group-item"><strong>Area:</strong> {{ data.area }} sq ft</li>
+        <li class="list-group-item"><strong>Bedrooms:</strong> {{ data.bedrooms }}</li>
+        <li class="list-group-item"><strong>Bathrooms:</strong> {{ data.bathrooms }}</li>
+        <li class="list-group-item"><strong>Location:</strong> {{ data.location|title }}</li>
+         <li class="list-group-item"><strong>Property Type:</strong> {{ data.property_type|title }}</li>
+        <li class="list-group-item"><strong>Year Built:</strong> {{ data.year_built }}</li>
+        <li class="list-group-item"><strong>Amenities:</strong>
+            {% if data.amenities %}
+                {{ data.amenities|join:", " }}
+            {% else %}
+                None
+            {% endif %}
+        </li>
+    </ul>
+
+    <a href="{% url 'price_predict' %}" class="btn btn-primary mt-3">Predict Again</a>
+</div>
+{% endblock %}

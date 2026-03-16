@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+  .property-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .property-card:hover {
+    transform: scale(1.02);
+  }
+
+  .property-image {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .property-details {
+    padding: 20px;
+  }
+
+  .property-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2c7be5;
+  }
+</style>
+
+<div class="container py-5" style="background-color: #f9f9f9; min-height: 100vh;">
+  <h2 class="mb-5 text-center text-primary">Search Results</h2>
+
+  {% if properties %}
+    <div class="row">
+      {% for property in properties %}
+        <div class="col-md-4 mb-4">
+          <div class="card property-card">
+            <img src="{{ property.image.url }}" class="card-img-top property-image" alt="Image">
+            <div class="property-details">
+              <div class="property-price">₹{{ property.price|floatformat:0 }}</div>
+              <p class="mb-1"><strong>Location:</strong> {{ property.location }}</p>
+              <p class="mb-1"><strong>Bedrooms:</strong> {{ property.bedrooms }} | <strong>Bathrooms:</strong> {{ property.bathrooms }}</p>
+              <p class="text-muted">{{ property.description|truncatewords:20 }}</p>
+              <a href="{% url 'property_detail' property.pk %}" class="btn btn-outline-primary mt-2">View Details</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="text-center text-muted">No properties found matching your search.</p>
+  {% endif %}
+
+  <div class="text-center mt-4">
+    <a href="{% url 'property_listings' %}" class="btn btn-outline-primary">🔙 Back to All Properties</a>
+  </div>
+</div>
+
+{% endblock %}

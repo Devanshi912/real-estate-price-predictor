@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+  .filter-bar {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+
+  .property-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    transition: transform 0.3s;
+    height: 500px; /* Combined */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .property-card:hover {
+    transform: scale(1.02);
+  }
+
+  .property-image {
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .property-details {
+    padding: 20px;
+    flex-grow: 1;
+  }
+
+  .property-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2c7be5;
+  }
+</style>
+
+<!-- Search Bar -->
+<form method="GET" action="{% url 'property_search' %}" class="mb-4 d-flex justify-content-center">
+  <input type="text" name="q" class="form-control w-50" placeholder="Search by location or BHK" required>
+  <button type="submit" class="btn btn-primary ms-2">Search</button>
+</form>
+
+
+
+<div class="row mt-4">
+  {% for property in properties %}
+    <div class="col-md-4">
+      <div class="card property-card">
+        <img src="{{ property.image.url }}" class="card-img-top property-image" alt="Property Image">
+        <div class="property-details">
+          <div class="property-price">₹ {{ property.price|floatformat:0 }}</div>
+          <p class="mb-1"><strong>Location:</strong> {{ property.location }}</p>
+          <p class="mb-1"><strong>Bedrooms:</strong> {{ property.bedrooms }} | <strong>Bathrooms:</strong> {{ property.bathrooms }}</p>
+          <a href="{% url 'property_detail' property.pk %}" class="btn btn-outline-primary mt-3">View Details</a>
+        </div>
+      </div>
+    </div>
+  {% empty %}
+    <div class="col-12 text-center mt-5">
+      <p class="text-muted">No properties found matching your criteria.</p>
+    </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

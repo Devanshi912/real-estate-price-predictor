@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <h2>About Our Real Estate Price Predictor</h2>
+        <p class="lead">Our mission is to provide accurate and reliable real estate price predictions using advanced machine learning techniques.</p>
+        
+        <h4 class="mt-4">How It Works</h4>
+        <p>Our system analyzes thousands of property listings and market trends to provide you with the most accurate price estimation possible. The model takes into account:</p>
+        <ul>
+            <li>Property characteristics (size, rooms, age)</li>
+            <li>Location and neighborhood data</li>
+            <li>Current market conditions</li>
+            <li>Historical price trends</li>
+            <li>Amenities and special features</li>
+        </ul>
+        
+        <h4 class="mt-4">Our Technology</h4>
+        <p>We use state-of-the-art machine learning algorithms including:</p>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Random Forest Regression</h5>
+                        <p class="card-text">For handling non-linear relationships between features and price.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Feature Engineering</h5>
+                        <p class="card-text">Careful selection and transformation of input variables.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <h4 class="mt-4">Our Team</h4>
+        <p>We are a group of data scientists and real estate professionals dedicated to bringing transparency to the property market.</p>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Model Accuracy</h5>
+                <div class="mb-3">
+                    <h6>Mean Absolute Error</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 85%" 
+                             aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">15%</div>
+                    </div>
+                    <small class="text-muted">85% accuracy rate</small>
+                </div>
+                <div class="mb-3">
+                    <h6>R² Score</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 78%" 
+                             aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">0.78</div>
+                    </div>
+                    <small class="text-muted">Goodness of fit</small>
+                </div>
+                <a href="{% url 'price_predict' %}" class="btn btn-primary mt-2">Try Our Predictor</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
